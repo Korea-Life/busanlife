@@ -1,0 +1,676 @@
+/*
+Responsive CSS
+*/
+@media screen and (max-width: 1200px){
+	.mid-content{
+		width: 100%;
+		padding: 0 10px;
+	}
+
+	.service-list .service-image{
+		width: 16%;
+		height: auto;
+	}
+	.service-list .service-detail{
+		width: 80%;
+	}
+
+	.team-tab{
+		padding: 0 50px;
+	}
+
+	.social-icons{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	.main-navigation > ul{
+		display: none;
+	}
+	.menu-toggle{
+		display: block;
+		height: 40px;
+		width: 40px;
+		background: url(../images/menu.png) no-repeat center #203281;
+		text-indent: -9999px;
+		cursor: pointer;
+	}
+	.logo-top #site-logo{
+		float: left;
+	}
+	.logo-top .main-navigation{
+		float: right;
+	}
+
+	.logo-top .menu-toggle{
+		float: right;
+	}
+	.main-navigation{
+		text-align: center;
+	}
+	.main-navigation > ul{
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background: #203281;
+		padding: 10px 0;
+		text-align: center;
+	}
+	.main-navigation > ul > li{
+		display: inline-block;
+		float: none;
+	}
+	.main-navigation > ul > li > a{
+		color:#FFF;
+	}
+	.main-navigation > ul > li.current a, 
+	.main-navigation li:hover > a,
+	.main-navigation .current_page_item > a, 
+	.main-navigation .current-menu-item > a{
+		color: #CCC;
+	}
+	.slider-caption{
+		padding-left: 70px;
+		padding-right: 70px;
+	}
+	#main-slider{
+		min-height: 0;
+	}
+}
+
+@media screen and (max-width: 768px){
+	h1{
+	font-size: 24px;
+	}
+	h2{
+		font-size: 20px;
+	}
+	h3{
+		font-size: 18px;
+	}
+	h4{
+		font-size: 16px;
+	}
+	h5{
+		font-size: 14px;
+	}
+	h6{
+		font-size: 12px;
+	}
+	.parallax-section h1{
+		font-size: 34px;
+	}
+	.slider-caption .caption-title{
+		font-size: 30px;
+	}
+	.slider-caption .caption-description{
+		font-size: 20px;
+	}
+	.service-list{
+		width: 100%;
+	}
+	.portfolio-list, .portfolio-list:nth-child(4n){
+		width: 32%;
+		margin-right: 2%;
+	}
+	.portfolio-list:nth-child(3n){
+		margin-right: 0;
+	}
+	.blog-listing .blog-list{
+		width: 80%;
+		margin: 0 auto 20px;
+		float: none;
+		display: block;
+	}
+	.blog-list .blog-image{
+		text-align: center;
+	}
+	.parallax-section input[type="text"], 
+	.parallax-section input[type="email"], 
+	.parallax-section input[type="url"], 
+	.parallax-section input[type="password"], 
+	.parallax-section input[type="search"], 
+	.parallax-section input[type="tel"], 
+	.parallax-section textarea{
+		width: 80%;
+	}
+	.service-listing .service-list{
+		float: none;
+	}
+	.footer-column-4 .footer-block{
+		width: 48%;
+	}
+	.copy-right, .site-info{
+		float: none;
+		text-align: center;
+	}
+	.main-navigation > ul > li{
+		display: block;
+		border-bottom: 1px solid #132265;
+	}
+	.main-navigation ul ul {
+		background: #db5e39;
+		position: static;
+		padding:0 10px;
+		font-size: 15px;
+		display: none;
+	}
+	#primary, #secondary{
+		float: none;
+		width: 100%;
+		/* added by KH */
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	#main-slider .bx-wrapper .bx-controls-direction a{
+		display: none;
+	}
+	.next-page{
+		display: none;
+	}
+	.main-navigation ul ul a{
+		color: #FFF;
+	}
+	.main-navigation ul ul li{
+		padding: 5px 0;
+	}
+	.main-navigation ul ul{
+		box-shadow: none;
+	}
+	.parallax-section{
+        background-attachment: scroll !important;
+        background-repeat: repeat !important;
+    }
+
+	/*
+	  added by KH
+	  registration in buddypress
+	*/
+	.addedbykh.joinus #primary{
+		display: table;
+		text-align: center;
+	}
+
+	.addedbykh.joinus #join-cover{
+		display: none;
+	}
+
+	.addedbykh.joinus #main{
+		width: 90%;
+		float: none;
+		display: inline-block;
+	}
+
+
+	.addedbykh.joinus #main .register-section{
+		text-align: center;
+	}
+
+	.addedbykh.joinus .bbp-submit-wrapper{
+		float: unset;
+		text-align: center;
+	}
+
+	.addedbykh.joinus .radio label[for ^= "option"] {
+		width: 55% !important;
+		float: right;
+	   	text-align: left;
+		clear: both;
+	}
+
+	.addedbykh.joinus .checkbox label:nth-child(n+2) {
+		width: 70% !important;
+		float: right;
+	    text-align: left;
+		clear: both;
+	}
+
+	.addedbykh.joinus .joinus-login-error,
+	.addedbykh.joinus div.error,
+	.addedbykh.joinus .detail-toggle-link-container {
+		width: 80% !important;
+		display: inline-block;
+	}
+
+	#buddypress #group-dir-search {
+		margin-top: 20px;
+	}
+
+}
+
+@media screen and (max-width: 480px){
+	.parallax-section h1{
+		/* edit by KH
+		font-size: 30px;
+		*/
+		font-size: 25px;
+	}
+	.service-list.odd .service-image{
+		float: left;
+	}
+	.service-list.odd .service-detail{
+		float: right;
+	}
+	.service-listing .service-list{
+		text-align: left;
+	}
+	.team-big-image{
+		display: none;
+	}
+	.team-detail{
+		float: none;
+		width: auto;
+	}
+	.team-image{
+		height: auto;
+	}
+	.team-tab .bx-wrapper .bx-viewport{
+		border-radius: 0;
+	}
+	.portfolio-list, .portfolio-list:nth-child(3n), .portfolio-list:nth-child(4n){
+		width: 49%;
+		margin-right: 2%;
+	}
+	.portfolio-list:nth-child(2n){
+		margin-right: 0;
+	}
+	.blog-listing .blog-list{
+		width: 100%;
+	}
+	.parallax-section input[type="text"], 
+	.parallax-section input[type="email"], 
+	.parallax-section input[type="url"], 
+	.parallax-section input[type="password"], 
+	.parallax-section input[type="search"], 
+	.parallax-section input[type="tel"], 
+	.parallax-section textarea{
+		width: 100%;
+	}
+
+	.team-content{
+		margin-top: 30px;
+	}
+    .top-footer .top-footer-wrap{
+        margin: 0;
+    }
+	.footer-block{
+		width: 100% !important;
+		margin: 0 0 15px !important;
+		float:none;
+	}
+	#site-logo,
+	.logo-top #site-logo{
+		width: 80%;
+		text-align:left;
+	}
+	.main-navigation > ul{
+		max-height:320px 
+	}
+	.slider-caption{
+		/* edit by KH
+		display: none;
+		*/
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	/*
+	  added by KH
+	  Customization Point
+	  need to check in localhost first
+	*/
+	.slider-caption .caption-title{
+		font-size: 30px;
+	}
+	.slider-caption .caption-description{
+		font-size: 22px;
+	}
+	.btn-wrap{
+		margin-top: 35px;
+	}
+
+	.btn-responsive-by-kh{
+		color: #333;
+		display: inline;
+		padding: 10px 15px;
+	    white-space: nowrap;
+	    margin-left: 8px;
+		padding: 4px 8px;
+		position: relative;
+		top: -3px;
+	 	text-decoration: none;
+		border: none;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		background: #e0e0e0;
+		text-shadow: none;
+		font-weight: 600;
+		font-size: 13px;
+	}
+
+	.entry-header{
+		padding: 0px;
+	}
+
+	.entry-header .entry-title{
+		font-size: 20px;
+	}
+
+	.entry-header #searchform{
+		margin-bottom: 10px;
+	}
+
+	.item-list-tabs{
+		display: none;
+	}
+
+	#buddypress .item-list-tabs{
+		display: inline;
+	}
+
+	#primary #main .page-header{
+		text-align: center;
+		height: 160px;
+	}
+
+	#primary #main .page-header #searchform{
+		float: none;
+	}
+
+	/* Buy & Sell */
+	.archive.category .page-header .page-title{
+		margin-bottom: 30px;
+	}
+
+	.pgntn-page-pagination-intro{
+		display: none;
+	}
+
+	.sce-timer{
+		font-size: 75% !important;
+	}
+		
+	#fep-tags {
+		width: 100% !important;
+	}
+
+	.search-no-results #colophon {
+		bottom: unset;
+		margin-top: 20px;
+	}
+	
+	/*
+	  added by KH
+	  bbpress board
+	*/
+	.bbp-topic-voice-count,
+	.bbp-topic-reply-count,
+	.bbp-topic-freshness,
+	.bbp-topic-meta{
+		display: none !important;
+	}
+
+	.bbp-create-topic-link-by-kh{
+		font-size: 11px;
+	}
+
+	.bbp-search-form,
+	.bbp-pagination-count{
+		margin-bottom: 15px !important;
+	}
+
+	.bbp-pagination-links{
+		font-size: 30px;
+	}
+
+	.bbp-topic-started-by .bbp-author-avatar{
+		display: none;
+	}
+
+	.bbp-body .bbp-topic-permalink{
+		font-size: 20px;
+	}
+
+	li.bbp-forum-info, li.bbp-topic-title{
+		width: 100% !important;
+	}
+
+	div.bbp-submit-wrapper {
+		width: 100%;
+		text-align: center;
+	}
+
+	/*
+	  added by KH
+	  buddypress
+	*/
+
+	#buddypress ul.item-list li div.meta,
+	#buddypress #group-create-nav,
+	#buddypress #groups-order-select {
+		display: none;
+	}
+
+	#buddypress #group-dir-search {
+		width: 100%;
+	}
+
+	#groups-dir-list .pagination-links{
+		font-size: 30px;
+		margin-top: 20px;
+	}
+
+	.entry-header {
+		margin-bottom: 20px;
+	}
+
+	.bbp-user-page #buddypress #item-body {
+		clear: both;
+		margin-top: 120px;
+	}
+
+	.groups #buddypress #item-body {
+		clear: both;
+		margin-top: 30px;
+	}
+
+	.groups #buddypress #activity-filter-select {
+		width: 70%;
+		text-align: center;
+	}
+
+	.groups #buddypress #activity-filter-by {
+		width: 70%;
+		float: right;
+	}
+
+	#buddypress div.item-list-tabs#object-nav {
+		font-size: 90%;
+	}
+
+	.groups.group-home #buddypress #item-body .item-list-tabs#subnav,
+	.bbp-user-page #buddypress #item-body .item-list-tabs#subnav {
+		border-right: 1px solid #ccc;
+		font-size: 80%;
+	}
+
+	.groups.group-invites #buddypress #item-body .invite,
+	.groups.group-admin #buddypress #item-body .item-list-tabs#subnav,
+	.groups.group-members #buddypress #item-body .item-list-tabs#subnav {
+		font-size: 80%;
+	}
+
+	.groups.group-members #buddypress #item-body .groups-members-search {
+		float: right;
+	}
+
+	.groups.group-members #buddypress #item-body #group_members-order-select {
+		float: left;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+	.groups.group-invites #buddypress #item-body div#invite-list {
+		width: 100px;
+	}
+	
+	.groups.group-invites #buddypress #item-body form.standard-form .main-column {
+		margin-left: 120px;
+	}
+
+	.groups.group-invites #buddypress #item-body form.standard-form .main-column #friend-list .action{
+		width: 100%;
+		text-align: center;
+		margin-left: unset;
+	}
+
+	.groups.group-invites #buddypress #item-body form.standard-form .main-column #friend-list li {
+		border-bottom: unset;
+	}
+
+	.groups.group-members #buddypress #item-body .action {
+		/*
+		position: absolute;
+		top: 15px;
+		*/
+	}
+
+	.bbp-user-page #buddypress #item-body ul.item-list li div.action {
+		width: 100%;
+		text-align: center;
+		top: unset;
+		right: unset;
+		margin-left: unset;
+		position: relative;
+	}
+
+	.bbp-user-page #buddypress #item-body #groups-list {
+		margin-top: -20px;
+	}
+
+	.bbp-user-page #buddypress #item-body #notifications-bulk-management thead .bulk-select-all, 
+	.bbp-user-page #buddypress #item-body #notifications-bulk-management thead .date, 
+	.bbp-user-page #buddypress #item-body #notifications-bulk-management thead .actions, 
+	.bbp-user-page #buddypress #item-body #notifications-bulk-management tbody .bulk-select-check,
+	.bbp-user-page #buddypress #item-body #notifications-bulk-management tbody .notification-since, 
+	.bbp-user-page #buddypress #item-body #notifications-bulk-management tbody .notification-actions, 
+	.bbp-user-page #buddypress #item-body #notifications-bulk-management .notifications-options-nav { 
+		display: none !important;
+	}
+
+	.groups #buddypress #item-body ul#member-list {
+		border-top: unset;
+	}
+
+	.groups #buddypress #item-body .bpfb_form_container {
+		margin-top: 15px;
+	}
+
+	.groups.group-admin #buddypress #item-body .item-list-tabs#subnav,
+	.bbp-user-page #buddypress #item-body .item-list-tabs#subnav {
+		width: 30%;
+		float: left;
+	}
+
+	.groups.group-admin #buddypress #item-body form,
+	.bbp-user-page #buddypress #item-body .bpfb_form_container,
+	.bbp-user-page #buddypress #item-body #account-delete-form,
+	.bbp-user-page #buddypress #item-body #settings-form,
+	.bbp-user-page #buddypress #item-body #bbpress-forums,
+	.bbp-user-page #buddypress #item-body #groups-list,
+	.bbp-user-page #buddypress #item-body #group-list,
+	.bbp-user-page #buddypress #item-body #members-list,
+	.bbp-user-page #buddypress #item-body #friend-list,
+	.bbp-user-page #buddypress #item-body .activity,
+	.bbp-user-page #buddypress #item-body #notifications-bulk-management,
+	.bbp-user-page #buddypress #item-body #pag-top,
+	.bbp-user-page #buddypress #item-body .messages,
+	.bbp-user-page #buddypress #item-body .profile {
+		width: 65%;
+		float: right;
+	}
+
+	.bbp-user-page #buddypress #item-body #message {
+		width: 65%;
+	}
+
+	.bbp-user-page #buddypress #item-body #notifications-bulk-management thead .title {
+		text-align: center;
+	}
+
+	#buddypress form#whats-new-form p.activity-greeting {
+		line-height: unset;
+	}
+
+	#buddypress form#whats-new-form .bpfb_actions_container {
+		margin-top: 20px;
+	}
+
+	#buddypress form#whats-new-form #whats-new-content {
+		margin-left: unset;
+		padding: 0;
+	}
+
+	#buddypress #item-body .activity {
+		width: 100%;
+		float: none;
+	}
+
+	.bbp-user-page #buddypress form select,
+	.bbp-user-page #buddypress form input.settings-input,
+	.bbp-user-page #buddypress ul.item-list li div.item-desc {
+		width: 100%;
+		margin: 0;
+
+	}
+
+	.bbp-user-page #buddypress #group-dir-pag-top.pagination-links{
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+
+	.bbp-user-page #buddypress form input.settings-input.password-entry-confirm {
+		margin-top: 10px;
+	}
+
+	.bbp-user-page #buddypress form table.notification-settings {
+		border-spacing: 10px;	
+	}
+
+	/*
+		added by KH
+		JOIN US
+	*/
+
+	.addedbykh.joinus .radio label[for ^= "option"] {
+		width: 65% !important;
+		float: right;
+	   	text-align: left;
+		clear: both;
+	}
+
+	.addedbykh.joinus .checkbox label:nth-child(n+2) {
+		width: 80% !important;
+		float: right;
+	    text-align: left;
+		clear: both;
+	}
+
+
+}
+
+@media screen and (max-width: 480px) and (orientation : landscape){
+	.main-navigation > ul{
+		max-height:220px 
+	}
+}
+
+@media screen and (min-width: 1001px){
+	.main-navigation > ul{
+		display: block !important;
+	}
+	.logo-top .main-navigation > ul{
+		display: inline-block !important;
+	}
+}

@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:9
+msgid "Oops! You may want to try a new search"
+msgstr ""
+#: 404.php:12
+msgid "Search for: "
+msgstr ""
+#: 404.php:14
+msgid "Search"
+msgstr ""
+
+#: comments.php:23
+msgid "No Comments yet, be the first to reply"
+msgstr ""
+#: comments.php:25
+msgid "Comments are Closed on this Post"
+msgstr ""
+
+#: content-count.php:46
+#: content-excerpt:24
+#: content.php:31
+msgid "No articles found"
+msgstr ""
+
+#: content:40
+msgid "Edit"
+msgstr ""
+
+#: footer.php:6
+msgid "Our Social Networks"
+msgstr ""
+#: footer.php:51
+msgid "Copyright"
+msgstr ""
+#: footer.php:55
+msgid "Top of Page"
+msgstr ""
+
+#: functions.php:6
+msgid "Primary Menu"
+msgstr ""
+#: functions.php:74
+msgid "Page %s"
+msgstr ""
+#: functions.php:175
+msgid "Primary Sidebar"
+msgstr ""
+#: functions.php:177
+msgid "Widgets will appear in the right sidebar on posts and pages"
+msgstr ""
+#: functions.php:184
+msgid "Footer Middle 1"
+msgstr ""
+#: functions.php:186
+msgid "Widgets will appear in the second column of the footer"
+msgstr ""
+#: functions.php:193
+msgid "Footer Middle 2"
+msgstr ""
+#: functions.php:195
+msgid "Widgets will appear in the third column of the footer"
+msgstr ""
+
+#: header.php:12
+msgid "Skip to content"
+msgid "Skip to content"
+msgstr ""

@@ -1,0 +1,43 @@
+.options-container {
+padding: 15px;
+display:block;
+margin-top:2em;
+position: relative;
+border:3px solid #ccc;
+width: 620px;
+}
+.options-container h1 {
+width: 22px;
+background: #f7f7f7;
+color: #7c7c7c;
+text-shadow: 0 1px 2px #c5c5ca;
+padding: 5px 5px 6px 5px;
+border: thin solid #aaa;
+border-radius: 2px;
+text-align: center;
+}
+.options-table {
+border: 1px solid #ccc;
+padding: 15px;
+width: 580px;
+background: #fafafa;
+margin: auto;
+}
+.options-table label {
+padding:3px;
+margin-right: 2em
+}
+.options-table input[type=text] {
+background: #fafaef;
+}
+.options-container fieldset {
+padding: 9px;
+border: 3px solid #999;
+border-radius:5px;
+background: #fafafa
+}
+td h3, td h4, td h5 {
+padding: 0 7px;
+}
+.clearme{clear: both; margin:0; padding:0;}
+.donate {color: #079; text-transform:uppercase;} 
