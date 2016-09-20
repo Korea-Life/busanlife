@@ -128,7 +128,7 @@ jQuery(document).ready(function($){
 		
 		var argPostId = $(this).attr('value');
 		$.ajax({
-			url: '/wordpress/wp-admin/admin-ajax.php',
+			url: '/wp-admin/admin-ajax.php',
 			data: {
 				'action': 'MyAjaxFunctionDeletePost',
 				'postData': argPostId,
@@ -155,13 +155,14 @@ jQuery(document).ready(function($){
 		
 		$.ajax({
 			
-			url: '/wordpress/wp-admin/admin-ajax.php',
+			url: '/wp-admin/admin-ajax.php',
 			data: {
 				'action': 'MyAjaxFunctionDeletePost',
 				'postData': argPostId,
 			},
 			success: function(data, textStatus, XMLHttpRequest){
-				window.location.href = document.referrer;
+				//window.location.href = document.referrer;
+				window.location.href = 'http://www.busan-life.com/buy-sell/';
 			},
 			error: function(XMLHttpRequest, textStatus, errorThrown){
 				alert(errorThrown);
@@ -192,10 +193,10 @@ jQuery(document).ready(function($){
 				'_wpnonce' : target_Wpnonce
 			},
 			success: function(data, textStatus, XMLHttpRequest){
-				window.location.href = 'http://localhost/wordpress/bbpress-question/';
+				window.location.href = 'http://www.busan-life.com/question-answer/';
 			},
 			error: function(XMLHttpRequest, textStatus, errorThrown){
-				window.location.href = 'http://localhost/wordpress/bbpress-question/';
+				window.location.href = 'http://www.busan-life.com/question-answer/';
 			}
 		});
 	});

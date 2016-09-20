@@ -181,16 +181,39 @@ function fep_process_form_input(){
 		//	added by KH
 		$status = update_post_meta($new_post_id, 'Allow Comments', true); 
 
-		// edit by KH
-		//$data['message'] = 'Your article has been '.$post_action.' successfully!<br/><a href="' . get_permalink($data['post_id'])  . '" id="fep-continue-editing">' . get_permalink($data['post_id']) . '</a>';
+		$message = '<a href="' . get_permalink($data['post_id'])  . '">' . 'Your item has been has been '.$post_action.' successfully!' . '</a>';
+		
+		// added by KH (Mail)
+		$item_tag = sanitize_text_field( $_POST['post_tags'] );
+		$item_tag_db = str_replace('&', '&amp;', $item_tag);
+		
+		$field_id = xprofile_get_field_id_from_name('Interested items');
 
-		$data['message'] = '<a href="' . get_permalink($data['post_id'])  . '">' . 'Your item has been has been '.$post_action.' successfully!' . '</a>';
+		$item_mail_recipient = get_user_emails_by_wpdb($field_id, $item_tag_db);
+
+		$item_mail_title = '[Buy&Sell] Interested item about ' . $item_tag . ' is just uploaded.';
+		$item_mail_body = '<h1>- PREVIEW -</h1>' . $post_content . '<p><p><p><br><br><br>' . '<h3><a href="' . get_permalink($data['post_id']) . '">SHOW MORE >></a></h3>';
+
+		$item_mail_headers .= "MIME-Version: 1.0\r\n";
+		$item_mail_headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+		if( current_user_can('send_mail', get_the_ID()) && $_POST['post_id'] == -1 ) {
+			if(wp_mail($item_mail_recipient, $item_mail_title, $item_mail_body, $item_mail_headers)) {
+	//			$message = $message . '<br>' . 'And Busan Life sends a mail to potential buyers'; 
+			}
+		}
+
+		// added by KH (Mail End)
+
+		$data['message'] = $message;
+
 
 	}
 	catch(Exception $ex){
 		$data['success'] = false;
 		$data['message'] = '<h2>Your submission has errors. Please try again!</h2>'.$ex->getMessage();
 	}
+
 	die(json_encode($data));
 }
 add_action( 'wp_ajax_fep_process_form_input', 'fep_process_form_input' );

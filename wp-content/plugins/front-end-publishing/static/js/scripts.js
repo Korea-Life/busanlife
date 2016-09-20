@@ -66,7 +66,7 @@ function post_has_errors(title,content,bio,category,tags, fimg){
 	//if ( tags != '' && countTags(tags) < fep_rules.min_tags )
 	//	error_string += 'You haven\'t added the required number of tags<br/>';
 	if ( tags == '' && countTags(tags) < fep_rules.min_tags )
-		error_string += 'You need to choose a item type<br/>';
+		error_string += 'You should choose a item type<br/>';
 
 	if ( countTags(tags) > fep_rules.max_tags )
 		error_string += 'There are too many tags<br/>';
@@ -133,7 +133,7 @@ jQuery(document).ready(function($){
 
 		// edit by KH
 		//var category 		= $("#fep-category").val();
-		var category 		= 12;//$("#fep-category").val();
+		var category 		= '5';//$("#fep-category").val();
 
 		var tags 			= $("#fep-tags").val();
 		var pid 			= $("#fep-post-id").val();

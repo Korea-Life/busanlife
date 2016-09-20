@@ -76,7 +76,7 @@ $post_date_class = ((!empty($post_date) && $post_date == ' ') || has_post_thumbn
 	if(current_user_can( 'edit_post', get_the_ID() )){	
 ?>
 		<div class="clearfix btn-wrap">
-		<a style="color:#333333; border: 2px solid #333333" class="btn" href="<?php site_url(); ?>/wordpress/show-article-list/?fep_action=edit&fep_id=<?php the_ID(); ?>"><?php _e('Edit'    ,'accesspress-parallax'); ?></a>
+		<a style="color:#333333; border: 2px solid #333333" class="btn" href="<?php site_url(); ?>/show-items-list/?fep_action=edit&fep_id=<?php the_ID(); ?>"><?php _e('Edit'    ,'accesspress-parallax'); ?></a>
 
 		<a id="btn-delete-single" style="color:#333333; border: 2px solid #333333" class="btn" href="#" value=<?php the_ID(); ?>><?php _e('Delete'    ,'accesspress-parallax'); ?></a>
 		</div>

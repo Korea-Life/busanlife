@@ -1679,7 +1679,8 @@ function bp_core_validate_user_signup( $user_name, $user_email ) {
 		}
 
 		// User name must pass WP's validity check.
-		if ( ! validate_username( $user_name ) ) {
+		// edit by KH
+		if ( ! validate_username( $user_name ) || strpos($user_name, " ") > 0 ) {
 			$errors->add( 'user_name', __( 'Usernames can contain only letters, numbers, ., -, and @', 'buddypress' ) );
 		}
 

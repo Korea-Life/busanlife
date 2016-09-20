@@ -16,18 +16,9 @@
 
 	// added by KH
 
-	/*
-	$query_string = $_SERVER['QUERY_STRING'];
-	parse_str($query_string, $query);
-	$argStr = $query['s_keyword'];
-	*/
-
 	$argStr = $_GET["s_keyword"];
 
-	//$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-
-
-	if(bbp_has_topics(array('post_parent' => 163,'s' => $argStr))):
+	if(bbp_has_topics(array('post_parent' => 6,'s' => $argStr))):
 
 ?>
 

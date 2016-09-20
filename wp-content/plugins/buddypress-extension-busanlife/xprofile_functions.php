@@ -294,7 +294,7 @@ function bp_add_custom_interests_list() {
 
 		if ( $interests_list_id ) {
 
-			$interests = getArrInterests();
+			$interests = getArrInterestedGroups();
 
 			foreach (  $interests as $interest ) {
 				xprofile_insert_field( array(

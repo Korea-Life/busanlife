@@ -153,8 +153,9 @@ function groups_action_create_group() {
 		// Check the nonce
 		check_admin_referer( 'groups_create_save_' . bp_get_groups_current_create_step() );
 
+		// edit by KH
 		if ( 'group-details' == bp_get_groups_current_create_step() ) {
-			if ( empty( $_POST['group-name'] ) || empty( $_POST['group-desc'] ) || !strlen( trim( $_POST['group-name'] ) ) || !strlen( trim( $_POST['group-desc'] ) ) ) {
+			if ( empty( $_POST['group-name'] ) || empty( $_POST['group-desc'] ) || empty( $_POST['ex-group-category'] ) || !strlen( trim( $_POST['group-name'] ) ) || !strlen( trim( $_POST['group-desc'] ) ) || !strlen( trim( $_POST['ex-group-category'] ) )) {
 				bp_core_add_message( __( 'Please fill in all of the required fields', 'buddypress' ), 'error' );
 				bp_core_redirect( trailingslashit( bp_get_groups_directory_permalink() . 'create/step/' . bp_get_groups_current_create_step() ) );
 			}

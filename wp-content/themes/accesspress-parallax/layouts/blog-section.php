@@ -44,7 +44,8 @@
 	?>
 	</div>
 	<div class="clearfix btn-wrap">
-	<a class="btn" href="<?php echo get_category_link($category)?>"><?php _e('Read All','accesspress-parallax'); ?></a>
+	<!-- edit by KH --> 
+	<a class="btn" href="<?php site_url(); ?>/buy-sell"><?php _e('Read All','accesspress-parallax'); ?></a>
 	</div>
 
 

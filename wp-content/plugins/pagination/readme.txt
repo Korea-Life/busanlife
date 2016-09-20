@@ -1,14 +1,14 @@
 === Pagination by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
-Tags: add custom block, add custom pagination block, add pagination block, add pagination buttons, best plugins, best pagination plugin, comments, content pagination, custom navigation, free, free plugins, free pagination plugin, free wp pagination plugin, free wordpress pagination plugins, improve pages navigation, multiple navigation, multiple pages, navigation, nextpage, page, page navigation, pages navigation, paginate, paginate plugin, pagination, pagination buttons, pagination buttons with text, pagination plugin, post pagination, simple paginate plugin, simple pagination plugin, simple pagination, replace standart pagination, wordpress pagination plugins, wordpress, wp, wp-paginate, wp plugin, wp free plugin, wp pagination, wp pagination plugin, wp simple pagination plugin, wp free pagination, wp free pagination plugin, wordpress plugin, wordpress free plugin, wordpress pagination, wordpress pagination plugin, wordpress simple pagination plugin, wordpress free pagination, wordpress free pagination plugin
+Tags: pagination, pagination block, custom pagination block, multiple navigation, multiple pages, navigation, next page, post pagination, pagination buttons, pagination plugin, improve pages navigation, paginate plugin
 Requires at least: 3.8
-Tested up to: 4.4
-Stable tag: 1.0.3
+Tested up to: 4.5.3
+Stable tag: 1.0.5
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Add pagination block to your WordPress website.
+Add customizable pagination to WordPress website. Split long content to multiple pages for better navigation.
 
 == Description ==
 
@@ -27,7 +27,9 @@ http://www.youtube.com/watch?v=TwAd3DWLGr8
 * Add pagination to templates where it is absent or replace the standard pagination.
 * Configure custom pagination block to fit your theme.
 * Choose block position on the page.
-* Display custom pagination block for chosen post types only. 
+* Display custom pagination block for chosen post types only.
+
+If you have a feature, suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">Suggest a Feature</a>
 
 = Recommended Plugins =
 
@@ -41,11 +43,11 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pr
 * Russian (ru_RU)
 * Ukrainian (uk)
 
-If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
 = Technical support =
 
-Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in another languages won't be accepted.
+Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in other languages won't be accepted.
 
 If you notice any bugs in the plugins, you can notify us about it and we'll investigate and fix the issue then. Your request should contain URL of the website, issues description and WordPress admin panel credentials.
 Moreover we can customize the plugin according to your requirements. It's a paid service (as a rule it costs $40, but the price can vary depending on the amount of the necessary changes and their complexity). Please note that we could also include this or that feature (developed for you) in the next release and share with the other users then. 
@@ -55,7 +57,7 @@ We can fix some things for free for the users who provide translation of our plu
 
 1. Upload the `pagination` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin using the 'Plugins' menu in your WordPress admin panel.
-3. You can adjust the necessary settings using your WordPress admin panel in "BWS Plugins" > "Pagination".
+3. You can adjust the necessary settings using your WordPress admin panel in "BWS Panel" > "Pagination".
 
 <a href="https://docs.google.com/document/d/1FIQaZEt0xVZkCXKh2DxVkjcHdrVDGlGSUjQE-qxzbKk/edit" target="_blank">View a Step-by-step Instruction on Pagination Installation</a>.
 
@@ -79,6 +81,10 @@ In order to hide it, type a block class or block id into the text field in the H
 
 Most likely that your theme was created uncorrectly and it does not provide the needed functionality to display custom pagination block. Please, contact your support service (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>) and we will help you to solve this issue.
 
+= I have custom post types where I output the information via custom query to the database. How can I add the pagination block to this custom post type? =
+
+It is necessary to add function <?php if ( function_exists( 'pgntn_display_pagination' ) ) pgntn_display_pagination( 'custom', $second_query ); ?> to the necessary place. In this function, specify the name of your custom query to the database instead of $second_query.
+
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
 Please make sure that the problem hasn't been discussed yet on our forum (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If no, please provide the following data along with your problem's description:
@@ -86,7 +92,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: <a href="http://bestwebsoft.com/wp-content/uploads/manual/wp_plugin/general/System_Status.pdf" target="_blank">System_Status.pdf</a>
+4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit?pli=1" target="_blank">Instruction on System Status</a>
 
 == Screenshots ==
 
@@ -96,6 +102,16 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 4. Appearance settings in WordPress admin panel.
 
 == Changelog ==
+
+= V1.0.5 - 20.07.2016 =
+* NEW : Ability to disable plugin styles.
+* Update : Color Picker was updated.
+* Update : BWS panel section was updated.
+
+= V1.0.4 - 19.04.2016 =
+* NEW : Ability to use for custom post types with custom queries to the dababase.
+* NEW : Ability to add custom styles.
+* Bugfix : The conflict in the RSS feed was fixed.
 
 = V1.0.3 - 30.12.2015 =
 * Bugfix : Displaying pagination block on the archive page and multipages was fixed.
@@ -114,6 +130,13 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Update : We updated all functionality for wordpress 4.2.2.
 
 == Upgrade Notice ==
+
+= V1.0.5 =
+* Functionality expanded.
+* Usability improved.
+
+= V1.0.4 =
+Ability to use for custom post types with custom queries to the dababase. Ability to add custom styles. The conflict in the RSS feed was fixed.
 
 = V1.0.3 =
 Displaying pagination block on the archive page and multipages was fixed. The bug with plugin menu duplicating was fixed.

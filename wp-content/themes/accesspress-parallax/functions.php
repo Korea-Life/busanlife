@@ -287,8 +287,6 @@ function joinus_body_class( $classes ) {
 	return $classes;
 }
 
-
-
 // redirect front page for logged in visitors
 
 
@@ -321,23 +319,17 @@ function add_bottom_group_pagination_links() {
 
 		<div class="pagination" style="margin-top:5px;">
 
+			<div class="pag-count" id="group-dir-count">
 
+			<?php bp_groups_pagination_count() ?>
 
-		<div class="pag-count" id="group-dir-count">
+			</div>
 
-		<?php bp_groups_pagination_count() ?>
+			<div class="pagination-links" id="group-dir-pag">
 
-		</div>
+			<?php bp_groups_pagination_links() ?>
 
-
-
-		<div class="pagination-links" id="group-dir-pag">
-
-		<?php bp_groups_pagination_links() ?>
-
-		</div>
-
-
+			</div>
 
 		</div>
 
@@ -472,14 +464,15 @@ add_action( 'lostpassword_post', 'custom_lostpassword_emptyfailed');
 
 function getArrInterestedItems(){
 	return array(
-	        "Collectibles & art",
+	        "Collectibles and art",
 	        "Electronics",
 	        "Fashion",
-	        "Home & garden",
+	        "Home and garden",
 	        "Motors",
-	        "Musical instruments & gear",
+	        "Musical instruments and gear",
 	        "Sporting goods",
-	        "Toys & hobbies",
+	        "Studying and researching",
+	        "Toys and hobbies"
 	        );  
 }
 
@@ -493,3 +486,67 @@ function getArrInterestedGroups(){
 	        );  
 }
 
+function get_user_emails_by_wpdb( $field_id, $value ) {
+
+	global $wpdb;
+
+	$user_emails = $wpdb->get_col(
+	        $wpdb->prepare(
+	            "
+	            SELECT user_email 
+	            FROM {$wpdb->prefix}bp_xprofile_data
+	            JOIN {$wpdb->prefix}users
+	            ON {$wpdb->prefix}bp_xprofile_data.user_id={$wpdb->prefix}users.id
+	            WHERE user_id
+	            IN (
+	            	SELECT user_id
+	            	FROM {$wpdb->prefix}bp_xprofile_data
+	            	WHERE field_id=406
+	            	AND value='Yes'
+	            	)
+	            AND field_id=%d 
+	            AND value LIKE '%%%s%%'
+	            "
+	            , $field_id, $value
+	            )
+	        );
+	
+	return $user_emails;
+}
+
+add_action( 'init', 'bpdev_set_email_notifications_preference' );
+function bpdev_set_email_notifications_preference( ) {
+	if ( is_user_logged_in() ) {
+		$user_id = get_current_user_id();
+		//I am putting all the notifications to no by default
+		//you can set the value to 'yes' if you want that notification to be enabled.
+		$settings_keys = array(
+				'notification_activity_new_mention'        => 'no',
+				'notification_activity_new_reply'          => 'no',
+				'notification_friends_friendship_request'  => 'no',
+				'notification_friends_friendship_accepted' => 'no',
+				'notification_groups_invite'               => 'no',
+				'notification_groups_group_updated'        => 'no',
+				'notification_groups_admin_promotion'      => 'no',
+				'notification_groups_membership_request'   => 'no',
+				'notification_messages_new_message'        => 'no',
+				);
+
+		foreach ( $settings_keys as $setting => $preference ) {
+
+			bp_update_user_meta( $user_id, $setting, $preference );
+		}
+	}
+}
+
+function my_files_only( $wp_query ) {
+//	if ( strpos( $_SERVER[ 'REQUEST_URI' ], '/wp-admin/upload.php' ) !== false ) {
+
+	if ($wp_query->query_vars['post_type']=="attachment"){
+	    if ( !current_user_can( 'level_5' ) ) {
+	    	global $current_user;
+	    	$wp_query->set( 'author', $current_user->id );
+	    }
+	}
+}
+add_filter('parse_query', 'my_files_only' );

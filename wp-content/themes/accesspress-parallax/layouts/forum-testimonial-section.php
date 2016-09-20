@@ -14,7 +14,7 @@
 		     'orderby' => 'meta_value',
 			 //'meta_key' => '_bbp_voice_count',
 			 'meta_key' => '_bbp_last_active_time',
-			 'post_parent' => 163,
+			 'post_parent' => 6,
 			 'posts_per_page' => 5,
 	     );
 		if ( bbp_has_topics( $bbp_loop_args ) ) :
@@ -52,7 +52,7 @@
 	</div>
 	<!-- added by KH -->
 	<div class="clearfix btn-wrap">
-	<a class="btn" href="<?php echo bbp_get_forum_permalink(192); ?>"><?php _e('Read All'    ,'accesspress-parallax'); ?></a>	
+	<a class="btn" href="<?php echo bbp_get_forum_permalink(8); ?>"><?php _e('Read All'    ,'accesspress-parallax'); ?></a>	
 	</div>
 	<!-- #primary -->
 

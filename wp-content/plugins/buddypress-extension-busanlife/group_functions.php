@@ -18,17 +18,33 @@ function group_header_fields_markup() {
 		<input type="text" name="ex-group-category" id="ex-group-category" value=""><br>
 	<?php
 	} else {
+
+		$group_id = bp_get_group_id();
+		$group_category = groups_get_groupmeta( $group_id, 'ex-group-category' );
+
 	?>
 		<!-- added by KH -->
-		<label for="ex-group-category">Group Category</label>
+		<label for="ex-group-category">Group Category (required)</label>
 		<select id="ex-group-category" name="ex-group-category">
 		<option value="" disabled selected hidden>Choose a group category</option>
 		<?php
+		// set value when user selected.
 		$group_options = getArrInterestedGroups();
 		foreach($group_options as $group_option){
+			// strcmp return 0 == equals
+			if(strcmp($group_category, $group_option)){
 		?>	
+
 			<option value="<?php echo $group_option; ?>"><?php echo $group_option; ?></option>
+
 		<?php
+			}else {
+		?>
+
+			<option value="<?php echo $group_option; ?>" selected><?php echo $group_option; ?></option>
+
+		<?php	
+			}
 		}
 		?>
 

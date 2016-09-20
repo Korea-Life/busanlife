@@ -10,10 +10,11 @@
 
 	<?php 
 	
-	echo do_shortcode('[bbp-single-forum id=163]'); 
-	//echo do_shortcode('[bbp-single-topic id=208]'); 
-	//bbp_list_forums();	
-	//echo bbp_get_forum_post_count('163');
+		// added by KH
+		$content = get_the_content();
+		$content = '<div>'.$content.'</div>';
+		echo do_shortcode($content);
+
 	?>
 
 	</div><!-- #primary -->

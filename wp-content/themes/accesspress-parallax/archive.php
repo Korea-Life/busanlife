@@ -74,17 +74,13 @@ get_header(); ?>
 				// added by KH
 				$category = get_category( get_query_var( 'cat' ) );
 				$cat_id = $category->cat_ID;
-				if($cat == 12) {
+				if($cat == 12 && current_user_can('publish_posts')) {
 				?>
 
-					<a href="http://localhost/wordpress/create-new-post/" class="btn-responsive-by-kh">Add New</a>
+					<a href="<?php site_url(); ?>/create-new-post/" class="btn-responsive-by-kh">Add New</a>
 					<!-- 
-					<a href="http://localhost/wordpress/show-article-list/" class="btn-responsive-by-kh">Show List</a>
+					<a href="http://localhost/show-items-list/" class="btn-responsive-by-kh">Show List</a>
 					-->
-
-				<?php
-				}
-				?>
 
 				</h1>
 
@@ -98,13 +94,17 @@ get_header(); ?>
 					<!--
 						<li id="list_new"><a href="http://localhost/wordpress/create-new-post/">Create A New Post </a></li>
 					-->
-						<li id="list_new"><a class="group-create no-ajax" href="http://localhost/wordpress/create-new-post/">Create A New Item</a></li>
+						<li id="list_new"><a class="group-create no-ajax" href="<?php site_url(); ?>/create-new-post/">Create A New Item</a></li>
 						<!--
-						<li id="list_show"><a class="group-create no-ajax" href="http://localhost/wordpress/show-article-list/">Show Items List</a></li>
+						<li id="list_show"><a class="group-create no-ajax" href="http://localhost/show-items-list/">Show Items List</a></li>
 						-->
 					</ul>
 				</div>
-				
+	
+				<?php
+				}
+				?>
+			
 				<?php
 					// Show an optional term description.
 					$term_description = term_description();

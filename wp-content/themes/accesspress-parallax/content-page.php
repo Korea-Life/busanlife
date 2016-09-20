@@ -12,22 +12,28 @@
 		<?php 
 			// edit by KH
 			// Question & Answer : bbpress
-			if(get_the_ID()==192) {
-				$btn_responsive_add_new = '<a href="' . site_url() . '/wordpress/create-a-new-topic-2" class="btn-responsive-by-kh">Add New</a>';
+			if(get_the_ID()==8) {// && current_user_can('publish_posts')) {
+		?>
+				<a href="<?php site_url(); ?>/question-answer/" class="no-link-color">
+		<?php
+				$btn_responsive_add_new = '<a href="' . site_url() . '/create-a-new-topic" class="btn-responsive-by-kh">Add New</a>';
+		
 				the_title( '<h1 class="entry-title">', $btn_responsive_add_new . '</h1>' ); ?>
+				</a>
 
 				<!-- added by KH -->
 				<?php bbp_get_template_part( 'form', 'search-to-topics' ); ?>
 
 				<div class="item-list-tabs">
 					<ul>
-						<li id="topic_new"><a class="group-create no-ajax" href="<?php site_url(); ?>/wordpress/create-a-new-topic-2">Create A New Topic</a></li>
+						<li id="topic_new"><a class="group-create no-ajax" href="<?php site_url(); ?>/create-a-new-topic">Create a New Topic</a></li>
 					</ul>
 				</div>
 
 		<?php
-			// Commnunity : buddypress
-			}else if(get_queried_object_id()==229){
+			// added by KH
+			// Groups : buddypress
+			}else if(get_queried_object_id()==11&&current_user_can('publish_posts')){
 
 				$btn_responsive_add_new = '<a href="' . site_url() . '/groups/create" class="btn-responsive-by-kh">Add New</a>';
 				the_title( '<h1 class="entry-title">', $btn_responsive_add_new . '</h1>' ); 

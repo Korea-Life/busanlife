@@ -7,6 +7,7 @@
 	overflow: hidden; 
 	text-align: center;
 	clear: both;
+	cursor: default;
 }
 .pgntn-page-pagination .dots {
 	display: inline-block;
@@ -14,13 +15,6 @@
 	margin-bottom: 0.5em;
     margin-left: 0.5em;
     padding: 0.3em 0.5em;
-}
-.pgntn-page-pagination-intro { 
-	padding: 0.3em 0.5em; 
-	margin: 0 1em 1em 0; 
-	background: #efefef; 
-	border: .1em solid #ccc; 
-	text-align: center;
 }
 .pgntn-multipage .pgntn-elipses,
 .pgntn-multipage .pgntn-page-pagination-intro {
@@ -34,11 +28,6 @@
 .pgntn-multipage .pgntn-page-pagination-block span:first-of-type ~ a {
 	margin-left: 0.5em;
 }
-
-.pgntn-comments *,
-.pgntn-multipage * { 
-	font-size: 0.8rem;
-}
 .pgntn-page-pagination-intro,
 .pgntn-page-pagination a,
 .pgntn-page-pagination .current {
@@ -47,4 +36,7 @@
 	margin-left: 0.5rem;
 	margin-bottom: 0.5rem;
 	padding: 0.3rem 0.5rem;
+}
+.pgntn-page-pagination a {
+	box-shadow: none !important;
 }

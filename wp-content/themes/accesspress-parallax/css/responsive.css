@@ -204,8 +204,13 @@ Responsive CSS
 	}
 
 
-	.addedbykh.joinus #main .register-section{
+	.addedbykh.joinus #main .register-section {
 		text-align: center;
+	}
+
+	.addedbykh.joinus #main .register-section #pass-strength-result {
+		margin: auto;
+		width: 50%;
 	}
 
 	.addedbykh.joinus .bbp-submit-wrapper{
@@ -396,7 +401,7 @@ Responsive CSS
 	}
 
 	.search-no-results #colophon {
-		bottom: unset;
+		bottom: auto;
 		margin-top: 20px;
 	}
 	
@@ -476,7 +481,7 @@ Responsive CSS
 	}
 
 	.groups #buddypress #activity-filter-select {
-		width: 70%;
+		width: 70% !important;
 		text-align: center;
 	}
 
@@ -545,7 +550,7 @@ Responsive CSS
 		position: relative;
 	}
 
-	.bbp-user-page #buddypress #item-body #groups-list {
+	.my-account.bbp-user-page #buddypress #item-body #groups-list {
 		margin-top: -20px;
 	}
 
@@ -600,7 +605,7 @@ Responsive CSS
 	}
 
 	#buddypress form#whats-new-form p.activity-greeting {
-		line-height: unset;
+		line-height: 1.5em;
 	}
 
 	#buddypress form#whats-new-form .bpfb_actions_container {
@@ -608,13 +613,21 @@ Responsive CSS
 	}
 
 	#buddypress form#whats-new-form #whats-new-content {
-		margin-left: unset;
+		margin-left: 0;
 		padding: 0;
 	}
 
 	#buddypress #item-body .activity {
 		width: 100%;
 		float: none;
+	}
+
+	#buddypress #item-body .activity .button{
+		line-height: 3em;
+	}
+
+	#buddypress #item-body .friendship-button {
+		margin-bottom: 10px;
 	}
 
 	.bbp-user-page #buddypress form select,
@@ -637,6 +650,54 @@ Responsive CSS
 	.bbp-user-page #buddypress form table.notification-settings {
 		border-spacing: 10px;	
 	}
+
+	.directory.groups #message.info {
+		display: none;
+	}
+
+	.item-list-tabs.no-ajax#group-create-tabs {
+		display: block;
+	}
+
+	.groups.group-create input[type="text"],
+	.groups.group-create textarea,
+	.groups.group-create select {
+		width: 100% !important;
+	}
+
+	.groups.group-avatar .left-menu {
+		margin: auto;
+		width: 50%;
+		display: block;
+		float: none !important;
+	}
+
+	.groups.group-avatar .main-column {
+		float: left;
+		margin-left: 0px !important;
+	}
+
+	.groups.group-invites .left-menu #invite-list,
+	.groups.group-invites .left-menu {
+		width: 100% !important;
+
+	}
+	.groups.group-invites .main-column {
+		display: none;
+	}
+
+	.button {
+		margin-top: 10px;
+	}
+
+	select {
+		width: 100%;
+	}
+
+	.kh-about-img {
+		margin-bottom: 20px;
+	}
+
 
 	/*
 		added by KH

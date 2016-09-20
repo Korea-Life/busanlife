@@ -603,6 +603,15 @@ Posts and pages
 	margin: 0 0 20px;
 }
 
+/* added by KH */
+.page-template-page-bscategory .entry-header h1.entry-title {
+	margin-left: 80px !important;
+}
+
+.no-link-color {
+	color: #333 !important;
+}
+
 .entry-header h1.entry-title{
 	/* edit by KH
 	font-weight: 300;
@@ -2102,6 +2111,20 @@ Responsive grid for pages
 }
 
 /* added by KH */
+
+.pgntn-page-pagination.pgntn-bottom {
+	display: none;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #253F98;
+}
+
+a.button {
+	display: inline-block;
+}
+
+.home-page .mid-content .parallax-content,
 .btn-responsive-by-kh{
 	display: none;
 }
@@ -2126,6 +2149,8 @@ Responsive grid for pages
 }
 
 .search .cat-links,
+.page-template-page-bscategory .cat-links,
+.page-template-page-bscategory .comments-links,
 .archive.category .cat-links,
 .search .comments-link,
 .archive.category .comments-link{   
@@ -2197,15 +2222,28 @@ Responsive grid for pages
 	float: right;
 }
 
+.addedbykh.joinus #main select {
+	width: 100%;
+}
+
+
 .addedbykh.joinus #main .register-section {
 	width: 100% !important;
 	margin-top: 20px;
 	margin-bottom: 15px;
 }
 
+
+.addedbykh.joinus #main .register-section .field-visibility-settings-notoggle{
+	clear: both;
+	margin-bottom: 30px;
+}
+
+
+
 .addedbykh.joinus #join-cover {
 	width: 46%;
-    background-image: url(http://localhost/wordpress/wp-content/uploads/2016/06/PicMonkey-Collage.jpg); 
+    background-image: url(http://www.busan-life.com/wp-content/uploads/2016/09/PicMonkey-Collage.jpg); 
     background-attachment: fixed;
     background-position: 0% -70%;
     position: absolute;
@@ -2271,6 +2309,7 @@ input[type="checkbox"] {
 }
 
 /* bbpress - added by KH  */
+
 .bbp-form {
 	width: 100%;
 	min-width: 0;
@@ -2359,6 +2398,11 @@ input[type="checkbox"] {
 	display: none;
 }
 
+.bbp-header .bbp-reply-author,
+.bbp-header .bbp-reply-content {
+	color: #fff;
+}
+
 /* front-end-publishing - added by KH  */
 #fep-featured-image{
 	width: 100%;
@@ -2407,6 +2451,25 @@ input[type="checkbox"] {
 	text-align: center;
 }
 
+
+.groups.group-members .groups-members-search {
+	text-align: right;
+}
+
+.groups #item-meta {
+	color: #333 !important;
+}
+
+.groups #item-meta span{
+	color: #555 !important;
+}
+
+.groups #item-meta .highlight {
+	display: block;
+}
+
+#buddypress #item-body .item-list-tabs#subnav li#notifications-personal-li,
+.groups.group-home div.item-list-tabs#subnav,
 .bbp-user-page #buddypress #item-header-content #item-meta,
 .bbp-user-page #buddypress div.item-list-tabs#subnav #activity-filter-select,
 .bbp-user-page #buddypress #item-body .bbp-pagination:last-child,
@@ -2429,6 +2492,10 @@ input[type="checkbox"] {
 
 #buddypress #item-body .item-list-tabs#subnav li {
 	width: 100%;
+}
+
+.groups.group-create #message {
+	margin-top: 15px !important;
 }
 
 .groups.group-admin #buddypress #item-body .bp-widget span {
@@ -2469,11 +2536,11 @@ input[type="checkbox"] {
 	margin-top: -90px;
 }
 
-.bbp-user-page #buddypress #item-body #groups-list,
-.bbp-user-page #buddypress #item-body #group-list,
-.bbp-user-page #buddypress #item-body #friend-list,
-.bbp-user-page #buddypress #item-body #members-list,
-.bbp-user-page #buddypress #item-body #notifications-bulk-management {
+.my-account.bbp-user-page #buddypress #item-body #groups-list,
+.my-account.bbp-user-page #buddypress #item-body #group-list,
+.my-account.bbp-user-page #buddypress #item-body #friend-list,
+.my-account.bbp-user-page #buddypress #item-body #members-list,
+.my-account.bbp-user-page #buddypress #item-body #notifications-bulk-management {
 	margin-top: -30px;
 }
 
@@ -2516,6 +2583,35 @@ input[type="checkbox"] {
 	line-height: 50px;
 	padding-left: 10px;
 }
+
+.bbp-user-page.my-groups #item-body .item-meta .activity {
+	float: left !important;
+}
+
+.bbp-user-page.my-groups #item-body .action .meta {
+	margin-top: 5px;
+}
+
+.bpfb_images br {
+	display: none;
+}
+
+.bpfb_images img {
+	margin: 2px;
+}
+
+#TB_window {
+	width: 90% !important;
+	margin-left: -45% !important;
+	text-align: center !important;
+	padding-bottom: 20px;
+}
+
+
+.directory.groups #message.info {
+	margin-top: 40px !important;
+}
+
 
 /*
 #buddypress div.item-list-tabs#subnav {

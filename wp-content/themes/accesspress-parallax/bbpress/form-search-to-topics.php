@@ -7,7 +7,7 @@
  */
 
 ?>
-<form role="search" method="get" id="searchform" action="<?php bloginfo('url'); ?>/bbpress-question/">
+<form role="search" method="get" id="searchform" action="<?php bloginfo('url'); ?>/question-answer/">
 	<div>
 		<label class="screen-reader-text hidden" for="bbp_search"><?php _e( 'Search for:', 'bbpress' ); ?></label>
 		<input class="input" type="text" placeholder="Search Topic..." style="color:#404040; background:#fafafa" value="<?php echo $_GET["s_keyword"]; ?>" name="s_keyword" id="s_keyword" />
