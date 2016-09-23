@@ -55,7 +55,7 @@
 		<!-- added by KH -->
 		<br>
 		<p id="nav">
-		<a href="<?php get_site_url(); ?>/wordpress/register">Register</a> | 	<a href="<?php get_site_url(); ?>/wordpress/lost-password" title="Password Lost and Found">Lost your password?</a>
+		<a href="<?php get_site_url(); ?>/register">Register</a> | 	<a href="<?php get_site_url(); ?>/lost-password" title="Password Lost and Found">Lost your password?</a>
 		</p>
 
 		<?php do_action( 'login_form' ); ?>
