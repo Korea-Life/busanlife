@@ -389,7 +389,7 @@ add_action( 'bp_after_signup_profile_fields', 'action_bp_after_signup_profile_fi
 
 
 // Join US bbpress
-
+/*
 function joinus_login_redirect($redirect_to){
 	//$return_url = get_site_url();
 	//if(!is_user_logged_in()) $return_url = "http://www.naver.com";
@@ -399,6 +399,15 @@ function joinus_login_redirect($redirect_to){
   	return $return_url;
 }
 add_filter("bbp_user_login_redirect_to", "joinus_login_redirect");
+*/
+
+if( !function_exists('custom_user_login_redirect') ) {
+	function custom_user_login_redirect() {
+		$redirect_to = get_site_url();
+		return $redirect_to;
+	}
+	add_filter('login_redirect','custom_user_login_redirect',10,3);
+}
 
 if( ! function_exists( 'custom_login_fail' ) ) {
 	function custom_login_fail( $username ) {
