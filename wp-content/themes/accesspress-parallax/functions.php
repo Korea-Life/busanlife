@@ -391,15 +391,19 @@ add_action( 'bp_after_signup_profile_fields', 'action_bp_after_signup_profile_fi
 // Join US bbpress
 
 function joinus_login_redirect($redirect_to){
-	$return_url = get_site_url();
+	//$return_url = get_site_url();
 	//if(!is_user_logged_in()) $return_url = "http://www.naver.com";
+
+	$return_url = "http://www.busan-life.com";
+
   	return $return_url;
 }
 add_filter("bbp_user_login_redirect_to", "joinus_login_redirect");
 
 if( ! function_exists( 'custom_login_fail' ) ) {
 	function custom_login_fail( $username ) {
-	    $referrer = $_SERVER['HTTP_REFERER']; // where did the post submission come from?
+	    //$referrer = $_SERVER['HTTP_REFERER']; // where did the post submission come from?
+	    $referrer = "http://www.busan-life.com/login/"
 	    // if there's a valid referrer, and it's not the default log-in screen
 	    if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') ) {
 	    	if ( !strstr($referrer,'?login=failed') ) { // make sure we don’t append twice
@@ -415,7 +419,8 @@ add_action( 'wp_login_failed', 'custom_login_fail' ); // hook failed login
 
 if( ! function_exists( 'custom_login_empty' ) ) {
 	function custom_login_empty(){
-	    $referrer = $_SERVER['HTTP_REFERER'];
+	    //$referrer = $_SERVER['HTTP_REFERER'];
+	    $referrer = "http://www.busan-life.com/login/"
 
 	    $id = $_POST["log"];
 	    $pwd = $_POST["pwd"];
@@ -438,7 +443,8 @@ add_action( 'authenticate', 'custom_login_empty');
 
 if( ! function_exists( 'custom_lostpassword_emptyfailed' ) ) {
 	function custom_lostpassword_emptyfailed(){
-		$referrer = $_SERVER['HTTP_REFERER'];
+	//	$referrer = $_SERVER['HTTP_REFERER'];
+		$referrer = "http://www.busan-life.com/login/"
 
 		$user_data = '';
 
