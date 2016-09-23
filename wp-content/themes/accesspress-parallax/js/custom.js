@@ -224,10 +224,12 @@ jQuery(document).ready(function($){
 				'_wpnonce' : target_Wpnonce
 			},
 			success: function(data, textStatus, XMLHttpRequest){
-				window.location.href = document.referrer;
+				location.reload();
+				//window.location.href = document.referrer;
 			},
 			error: function(XMLHttpRequest, textStatus, errorThrown){
-				window.location.href = document.referrer;
+				location.reload();
+				//window.location.href = document.referrer;
 			}
 		});
 	});
