@@ -403,7 +403,7 @@ add_filter("bbp_user_login_redirect_to", "joinus_login_redirect");
 if( ! function_exists( 'custom_login_fail' ) ) {
 	function custom_login_fail( $username ) {
 	    //$referrer = $_SERVER['HTTP_REFERER']; // where did the post submission come from?
-	    $referrer = "http://www.busan-life.com/login/"
+	    $referrer = "http://www.busan-life.com/login/";
 	    // if there's a valid referrer, and it's not the default log-in screen
 	    if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') ) {
 	    	if ( !strstr($referrer,'?login=failed') ) { // make sure we don’t append twice
@@ -420,7 +420,7 @@ add_action( 'wp_login_failed', 'custom_login_fail' ); // hook failed login
 if( ! function_exists( 'custom_login_empty' ) ) {
 	function custom_login_empty(){
 	    //$referrer = $_SERVER['HTTP_REFERER'];
-	    $referrer = "http://www.busan-life.com/login/"
+	    $referrer = "http://www.busan-life.com/login/";
 
 	    $id = $_POST["log"];
 	    $pwd = $_POST["pwd"];
@@ -444,7 +444,7 @@ add_action( 'authenticate', 'custom_login_empty');
 if( ! function_exists( 'custom_lostpassword_emptyfailed' ) ) {
 	function custom_lostpassword_emptyfailed(){
 	//	$referrer = $_SERVER['HTTP_REFERER'];
-		$referrer = "http://www.busan-life.com/login/"
+		$referrer = "http://www.busan-life.com/login/";
 
 		$user_data = '';
 
