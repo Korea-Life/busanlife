@@ -243,6 +243,15 @@ Responsive CSS
 		margin-top: 20px;
 	}
 
+	#how-to-join-desktop {
+		display: none;
+	}
+
+	#how-to-join-mobile {
+		display: inline-block;
+	}
+
+
 }
 
 @media screen and (max-width: 480px){
