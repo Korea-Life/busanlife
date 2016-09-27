@@ -2613,6 +2613,11 @@ input[type="checkbox"] {
 }
 
 
+#how-to-join-mobile {
+	display: none;	
+}
+
+
 /*
 #buddypress div.item-list-tabs#subnav {
 	margin-top: 0px;
