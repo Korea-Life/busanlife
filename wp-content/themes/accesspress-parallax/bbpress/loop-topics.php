@@ -18,10 +18,38 @@
 
 	$argStr = $_GET["s_keyword"];
 
-	if(bbp_has_topics(array('post_parent' => 6,'s' => $argStr))):
+	$post_parent = 6;
 
+	$arr_body_class = get_body_class();
+	$index = array_search('forum', $arr_body_class);
+
+	$user_id = get_current_user_id();
+	$group_id = bp_get_group_id();
+
+	if($index>0 && ( groups_is_user_mod($user_id,$group_id)
+     			|| groups_is_user_admin($user_id,$group_id) )){
+
+    	$post_parent = get_the_ID();
 ?>
+     	<!-- added by KH -->
+     	<?php bbp_get_template_part( 'form', 'search-to-topics' ); ?>
 
+     	<div class="item-list-tabs">
+     		<ul>
+     			<li id="topic_new">
+     				<form id="topic-form" method="post" action="<?php site_url(); ?>/wordpress/create-a-new-topic">
+     				<input type="hidden" name="ForumId" value="<?php echo $post_parent; ?>" /> 
+     				<a class="group-create no-ajax" onclick="document.getElementById('topic-form').submit();">Create a New Topic</a>
+     				</form>
+     			</li>
+     		</ul>
+     	</div>
+<?php
+	}
+
+	if(bbp_has_topics(array('post_parent' => $post_parent,'s' => $argStr))):
+//	if(bbp_has_topics(array('post_parent' => get_the_ID(),'s' => $argStr))):
+?>
 <ul id="bbp-forum-<?php bbp_forum_id(); ?>" class="bbp-topics">
 
 	<li class="bbp-header">

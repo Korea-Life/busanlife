@@ -565,3 +565,19 @@ function my_files_only( $wp_query ) {
 	}
 }
 add_filter('parse_query', 'my_files_only' );
+
+//BBpress New Topic Button // 
+function wpmu_bbp_create_new_topic(){
+
+	if ( isset($_POST['ForumId']) ){
+
+	    return do_shortcode("[bbp-topic-form forum_id=".$_POST['ForumId']."]");
+
+	}else{
+
+	    return do_shortcode("[bbp-topic-form forum_id=6]");
+
+	}   
+}
+add_shortcode('wpmu_bbp_topic', 'wpmu_bbp_create_new_topic', 10);
+//End BBpress New Topic Button //

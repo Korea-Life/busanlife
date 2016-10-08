@@ -2349,6 +2349,10 @@ input[type="checkbox"] {
 	margin-top: 10px;
 }
 
+#bbpress-forums #searchform {
+	float: right;
+}
+
 .bbp-header {
 	background-color: rgba(56, 91, 158, 0.8) !important;
 }
@@ -2468,6 +2472,10 @@ input[type="checkbox"] {
 	display: block;
 }
 
+.groups.forum #topic_new {
+	font-size: 16px;
+}
+
 #buddypress #item-body .item-list-tabs#subnav li#notifications-personal-li,
 .groups.group-home div.item-list-tabs#subnav,
 .bbp-user-page #buddypress #item-header-content #item-meta,
@@ -2496,6 +2504,10 @@ input[type="checkbox"] {
 
 .groups.group-create #message {
 	margin-top: 15px !important;
+}
+
+#topic_new .group-create {
+	cursor:pointer;
 }
 
 .groups.group-admin #buddypress #item-body .bp-widget span {

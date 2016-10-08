@@ -16,7 +16,7 @@
 		?>
 				<a href="<?php site_url(); ?>/question-answer/" class="no-link-color">
 		<?php
-				$btn_responsive_add_new = '<a href="' . site_url() . '/create-a-new-topic" class="btn-responsive-by-kh">Add New</a>';
+				$btn_responsive_add_new = '<a href="' . site_url() . '/create-a-new-topic/?ForumId=6" class="btn-responsive-by-kh">Add New</a>';
 		
 				the_title( '<h1 class="entry-title">', $btn_responsive_add_new . '</h1>' ); ?>
 				</a>
@@ -26,7 +26,7 @@
 
 				<div class="item-list-tabs">
 					<ul>
-						<li id="topic_new"><a class="group-create no-ajax" href="<?php site_url(); ?>/create-a-new-topic">Create a New Topic</a></li>
+						<li id="topic_new"><a class="group-create no-ajax" href="<?php site_url(); ?>/create-a-new-topic/?ForumId=6">Create a New Topic</a></li>
 					</ul>
 				</div>
 

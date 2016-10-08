@@ -286,7 +286,10 @@ class BBP_Forums_Group_Extension extends BP_Group_Extension {
 				<p class="description"><?php esc_html_e( 'Saying no will not delete existing forum content.', 'bbpress' ); ?></p>
 			</div>
 
-			<?php if ( bbp_is_user_keymaster() ) : ?>
+			<?php if ( 0 ) :
+			// edit by KH
+			//bbp_is_user_keymaster() ) : ?>
+
 				<div class="field-group">
 					<label for="bbp_group_forum_id"><?php esc_html_e( 'Group Forum:', 'bbpress' ); ?></label>
 					<?php
